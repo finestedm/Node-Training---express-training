@@ -1,0 +1,19 @@
+doctype html
+
+block content
+
+html(lang='en')
+  body
+    table.table.table-striped
+      tr
+        th Text
+        th User
+        th Added
+
+      each n in messages
+        tr
+          td= n.text
+          td= n.user
+          td= n.added
+
+    a(href="/new") this is the link text

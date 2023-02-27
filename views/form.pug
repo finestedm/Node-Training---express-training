@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  body
+  form(action='/new', method='POST')
+    p
+      | Author name: 
+      input(type='text', name='messageAuthor', value='', placeholder='Author name')
+      | Message: 
+      input(type='text', name='messageText', value='', placeholder='Message') 
+    input(type='submit', value='Submit')
