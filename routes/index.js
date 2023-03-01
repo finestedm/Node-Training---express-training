@@ -29,4 +29,8 @@ router.post('/new', (req, res, next) => {
   res.redirect('/')
 })
 
+router.get('/', (req, res) => {
+  res.redirect('/catalog')
+})
+
 module.exports = router;
