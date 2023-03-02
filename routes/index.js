@@ -16,7 +16,7 @@ const messages = [
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-  res.render('index', { title: 'Mini Messageboard', messages: messages });
+  res.redirect('/catalog')
 });
 
 router.get('/new', function (req, res, next) {
@@ -29,8 +29,5 @@ router.post('/new', (req, res, next) => {
   res.redirect('/')
 })
 
-router.get('/', (req, res) => {
-  res.redirect('/catalog')
-})
 
 module.exports = router;
