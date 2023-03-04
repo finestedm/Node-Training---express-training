@@ -13,8 +13,8 @@ const genreSchema = new Schema({
 
 genreSchema.virtual("url").get(function () {
   // We don't use an arrow function as we'll need the this object
-  return `/catalog/genre/${this.name}`;
+  return `/catalog/genre/${this._id}`;
 });
 
 // Export model
-module.exports = mongoose.model("genre", genreSchema);
+module.exports = mongoose.model("Genre", genreSchema);
