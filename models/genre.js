@@ -2,19 +2,23 @@ const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
-const genreSchema = new Schema({
-    name: {
-        type: String,
-        minLength: 3,
-        maxLength: 100,
-        required: true
-    }
+const GenreSchema = new Schema({
+  name: {
+    type: String,
+    minLength: 3,
+    maxLength: 100,
+    required: true
+  }
 });
 
-genreSchema.virtual("url").get(function () {
+GenreSchema.virtual("url").get(function () {
   // We don't use an arrow function as we'll need the this object
   return `/catalog/genre/${this._id}`;
 });
 
 // Export model
+<<<<<<< HEAD
 module.exports = mongoose.model("Genre", genreSchema);
+=======
+module.exports = mongoose.model("Genre", GenreSchema);
+>>>>>>> master

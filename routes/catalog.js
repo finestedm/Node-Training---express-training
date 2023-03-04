@@ -65,6 +65,12 @@ router.get("/authors", author_controller.author_list);
 
 /// GENRE ROUTES ///
 
+// GET request for list of all Genre.
+router.get("/genres", genre_controller.genre_list);
+
+// GET request for one Genre.
+router.get("/genre/:id", genre_controller.genre_detail);
+
 // GET request for creating a Genre. NOTE This must come before route that displays Genre (uses id).
 router.get("/genre/create", genre_controller.genre_create_get);
 
@@ -83,11 +89,6 @@ router.get("/genre/:id/update", genre_controller.genre_update_get);
 // POST request to update Genre.
 router.post("/genre/:id/update", genre_controller.genre_update_post);
 
-// GET request for one Genre.
-router.get("/genre/:id", genre_controller.genre_detail);
-
-// GET request for list of all Genre.
-router.get("/genres", genre_controller.genre_list);
 
 /// BOOKINSTANCE ROUTES ///
 
