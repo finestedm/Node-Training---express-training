@@ -33,7 +33,6 @@ exports.index = (req, res) => {
   );
 };
 
-// Display list of all books.
 // Display list of all Books.
 exports.book_list = function (req, res, next) {
   Book.find({}, "title author")

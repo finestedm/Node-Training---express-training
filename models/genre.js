@@ -17,8 +17,4 @@ GenreSchema.virtual("url").get(function () {
 });
 
 // Export model
-<<<<<<< HEAD
-module.exports = mongoose.model("Genre", genreSchema);
-=======
 module.exports = mongoose.model("Genre", GenreSchema);
->>>>>>> master
