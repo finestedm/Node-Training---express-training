@@ -68,11 +68,11 @@ router.get("/authors", author_controller.author_list);
 // GET request for list of all Genre.
 router.get("/genres", genre_controller.genre_list);
 
-// GET request for one Genre.
-router.get("/genre/:id", genre_controller.genre_detail);
-
 // GET request for creating a Genre. NOTE This must come before route that displays Genre (uses id).
 router.get("/genre/create", genre_controller.genre_create_get);
+
+// GET request for one Genre.
+router.get("/genre/:id", genre_controller.genre_detail);
 
 //POST request for creating Genre.
 router.post("/genre/create", genre_controller.genre_create_post);
